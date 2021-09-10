@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "2021-9-9 算法 "
-date:   2021-09-09 9:05
+date:   2021-9-9 9:05
 categories: code
 tags: code 
 excerpt: 今天的算法练习
@@ -10,7 +10,7 @@ excerpt: 今天的算法练习
 # 和为S的连续正数序列
 三种方法，暴力、前缀和、滑动窗口
 
-```
+```C++
 //前缀和方法  从当前位置向后加  如果满足条件就 遍历 这个区间
     vector<vector<int> > FindContinuousSequence(int sum) {
         vector<vector<int>> result;
@@ -35,7 +35,7 @@ excerpt: 今天的算法练习
 
 # 和为S的两个数字  
 因为题目给定的是有序数列 查找两个可以使用双指针
-```
+```C++
  vector<int> FindNumbersWithSum(vector<int> array,int sum) {
         vector<int> result;
         map<int,int> map;
@@ -60,7 +60,7 @@ excerpt: 今天的算法练习
 ```
 
 # 左旋字符串
-```
+```C++
 string LeftRotateString(string str, int n) {
         if(n>str.size()) return str;
         return str.substr(n) + str.substr(0,n);
@@ -68,7 +68,7 @@ string LeftRotateString(string str, int n) {
 ```
 
 # 反转单词序列
-```
+```C++
     string ReverseSentence(string str) {
         if(str.empty()) return str;
         int i = 0;  int strlong = str.size();
@@ -96,7 +96,7 @@ string LeftRotateString(string str, int n) {
 
 
 # JZ45 扑克牌顺子
-```
+```C++
     bool IsContinuous( vector<int> numbers ) {
         sort(numbers.begin(),numbers.end());
         int zero_num = 0;
@@ -114,7 +114,7 @@ string LeftRotateString(string str, int n) {
 
 
 # 孩子们的游戏
-```
+```C++
     int LastRemaining_Solution(int n, int m) {
         if(n == 0) return -1;
         int child = n;
@@ -148,7 +148,7 @@ string LeftRotateString(string str, int n) {
 
 # 求和 不用运算符 不用循环 不用 。。
 
-```
+``` C++
     int Sum_Solution(int n) {
         n && (n += Sum_Solution(n-1));
         return n;
@@ -157,7 +157,7 @@ string LeftRotateString(string str, int n) {
 ```
 
 # 不使用加减乘除 做加法
-```
+```C++
     int Add(int num1, int num2) {
         while(num2 != 0){
             int c = ((unsigned int)(num1 & num2)) << 1;
